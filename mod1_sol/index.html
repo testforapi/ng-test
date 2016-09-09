@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app= "LunchCheck">
   <head>
     <meta charset="utf-8">
-    <title>Hello World</title>
+    <title>Module solution</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+    input{
+      margin-bottom: 5px;
+    }
+    </style>
   </head>
   <body>
-    <h1> Hello AngularJS! </h1>
+    <div ng-controller="LunchCheckController">
+      <h1> Lunch Checker </h1>
+      <input type="text" size="50" ng-model="items" ng-style="textStyle"></input>
+      <span ng-style="messageStyle">{{message}}</span>
+      <div>
+        <button ng-click="checkIfTooMuch()">Check If too much</button>
+      </div>
+    </div>
   </body>
 </html>
